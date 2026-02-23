@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
+import React from "react";
 import Heading from "../Heading.jsx";
 import ProjectBox from "./ProjectBox.jsx";
 
 
-const Projects = ({ ProjectData }) => {
+const Projects = React.memo(function Projects({ ProjectData }) {
   return (
     <div className="h-full page-shadow bg-white p-10">
       {/* heading */}
@@ -18,6 +19,6 @@ const Projects = ({ ProjectData }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Projects;

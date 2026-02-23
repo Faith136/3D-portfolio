@@ -1,13 +1,16 @@
 /* eslint-disable react/prop-types */
-//import React from "react";
+import React from "react";
 
-const Cover = ({ coverImg, title, subtitle }) => {
+
+const Cover = React.memo(function Cover({ coverImg, title, subtitle }){
   const coverImgStyle = {
     backgroundImage: `url(${coverImg})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
     width: "100%",
+    loading: "eager",
+    fetchPriority: "high",
   };
 
   return (
@@ -25,6 +28,6 @@ const Cover = ({ coverImg, title, subtitle }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Cover;

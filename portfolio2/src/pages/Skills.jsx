@@ -31,16 +31,16 @@ const Skills = () => {
                <p className=" bg-primary/25 text-lg">NextJs(currently exploring this)</p>
                <p className=" bg-primary/25 text-lg">MongoDB</p>
                <p className=" bg-primary/25 text-lg">Firebase</p>
-               <p className=" bg-primary/25 text-lg">Redux</p>
+               <p className=" bg-primary/25 text-lg">SQL</p>
                </div>
                <div className="">
               <h1 className="text-2xl md:text-4xl font-bold text-black/80">Deployment</h1>
                <p className=" bg-primary/25 text-lg">Git and Github</p>
-               <p className=" bg-primary/25 text-lg">Github actions(Vercel)</p>
+               <p className=" bg-primary/25 text-lg">Web Perfomance Optimization and Testing</p>
                </div>
                <div className="">
               <h1 className="text-2xl md:text-4xl font-bold text-black/80">Soft Skills</h1>
-               <p className=" bg-primary/25 w-auto">Effective communnication, Curious and adaptable</p>
+               <p className=" bg-primary/25 w-auto">Collaborative, Curious and Adaptable</p>
                
                </div>
                </div>

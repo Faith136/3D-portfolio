@@ -19,10 +19,10 @@ const Resume = () => {
       </div>
       
       <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="text-xl font-bold text-gray-700">Edureka</h3>
-        <p className="text-sm text-gray-500">Fullstack Web Development (December 2023 - March 2024)</p>
+        <h3 className="text-xl font-bold text-gray-700">Freecode  Camp</h3>
+        <p className="text-sm text-gray-500">Frontend Development (December 2025 - Feb 2026)</p>
         <p className="text-gray-600 mt-2">
-          Focused on MERN stack.
+          Focused on React, CSS, Web optimization & Testing.
         </p>
       </div>
       

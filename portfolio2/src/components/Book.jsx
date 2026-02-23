@@ -1,34 +1,34 @@
-//import React from 'react'
+import React from 'react'
 import HTMLFlipBook from 'react-pageflip';
 import Page from './Page';
 import Cover from '../pages/Cover/Cover';
-import coverImgs from '../assets/cover.png'
+import coverImgs from '../assets/cover.webp'
 import FirstPage from '../pages/FirstPage';
 import Skills from '../pages/Skills';
 import Services from '../pages/Service/Services';
 import About from '../pages/About';
 import Projects from '../pages/projects/Projects';
 import Contac from '../pages/contacts/Contac';
-import EndImg from '../assets/last-page.png';
+import EndImg from '../assets/last-page.webp';
 import Resume from '../pages/Resume';
 import AoB from '../pages/AoB';
-import resta from "../assets/resta.png";
-import zom from "../assets/zom.png";
-import hos from "../assets/hos.jpg";
-import mpesa from "../assets/mpesa.png";
-import ecom from "../assets/ecom.png";
-import promp from "../assets/promp.png";
+import resta from "../assets/resta.webp";
+import zom from "../assets/zom.webp";
+import hos from "../assets/hos.webp";
+import mpesa from "../assets/mpesa.webp";
+import ecom from "../assets/ecom.webp";
+import promp from "../assets/promp.webp";
 
 
 
-function Book() {
+const Book = React.memo(function Book() {
     const ProjectData = [
         {
-          name: "Hospital website",
-          description: "Meant to offer the hospital an online presence so that the patients can view and access the hospital services more easily.",
+          name: "Freecodecamp Frontend Certificate",
+          description: "This is a small portfolio that contains demos for various practice projects done while learning.Learnt about state management, memoization, responsive design, optimization, hooks and testing.",
           image: hos,
           previewLink: "https://hospital-coral-nine.vercel.app/",
-          tools: 'Html,CSS,Javascript',
+          tools: 'React, Tailwind',
           githubLink: 'https://github.com/Faith136/hospital',
         },
         {
@@ -60,8 +60,8 @@ function Book() {
       ];
       const ProjectData3 = [
         {
-          name: "Promptopia webapp",
-          description: "Complete Responsive website using Next js and Tailwind CSS.If you want to see it click the link below to see the code and the live demonstrations",
+          name: "3D RealEstate Web App",
+          description: "Complete Responsive webapp in Next js and Tailwind CSS.Its main purpose is provide virtual experience of varios properties to the customers and property management functionalities to the owners.",
           image: promp,
           previewLink: "",
           tools: 'Next js,tailwindcss,Next auth,MongoDB,Node js',
@@ -120,6 +120,6 @@ function Book() {
 
         </HTMLFlipBook>
     );
-}
+})
 
 export default Book;

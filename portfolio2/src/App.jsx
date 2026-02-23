@@ -1,5 +1,5 @@
 import Book from "./components/Book";
-import BgTexture from "./assets/brown-wooden-flooring.jpg";
+import BgTexture from "./assets/brown-wooden-flooring.webp";
 
 const BgTextureStyle = {
   backgroundImage: `url(${BgTexture})`,

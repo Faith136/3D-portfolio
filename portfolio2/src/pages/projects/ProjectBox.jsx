@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
-//import React from "react";
+import React from "react";
 
-import { AiFillGithub } from "react-icons/ai";
+import { Github } from "lucide-react";
 
-const ProjectBox = ({ ProjectData }) => {
+
+const ProjectBox = React.memo(function ProjectBox({ ProjectData }) {
   return (
     <div>
       <div className="grid grid-cols-2 gap-4 mt-10">
@@ -35,7 +36,7 @@ const ProjectBox = ({ ProjectData }) => {
                 </a>
                 <a
                   href={project.githubLink}>
-                <AiFillGithub className="social-btn text-primary/80 mt-2" />
+                <Github className="social-btn text-primary/80 mt-6" />
                 </a>
               </div>
 
@@ -46,6 +47,6 @@ const ProjectBox = ({ ProjectData }) => {
       </div>
     </div>
   );
-};
+});
 
 export default ProjectBox;

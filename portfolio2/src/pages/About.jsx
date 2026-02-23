@@ -1,8 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-//import React from "react";
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillMessage } from "react-icons/ai";
-import Heading from "./Heading";
 
+import { MessageSquareTextIcon, MailIcon,  Github, Linkedin } from "lucide-react";
+import Heading from "./Heading";
 
 const About = () => {
   return (
@@ -25,18 +24,18 @@ const About = () => {
                     I am eagerly anticipating the opportunity to work with you. Kindly send me an email at the address provided in the contact section. Thank you very much.
         </p>
         {/* Social Links */}
-        <div className="flex space-x-4 mt-10">
-          <AiFillMessage className="social-btn" />
-          <AiFillInstagram className="social-btn" />
-          <AiFillGithub className="social-btn" />
-          <AiFillLinkedin className="social-btn" />
+        <div className="flex space-x-6 mt-14">
+          <MessageSquareTextIcon className="social-btn" />
+          <MailIcon className="social-btn" />
+          <a href="https://github.com/Faith136"><Github className="social-btn" /></a>
+          <a href="https://www.linkedin.com/in/faith-odongo-4b6977256/"><Linkedin className="social-btn" /></a>
         </div>
         {/* Button Links */}
         <div className="flex space-x-4 mt-4">
-          <a href="#" className="primary-btn">
+            <a href="/cv.pdf" className="primary-btn" download target="_blank" rel="noopener noreferrer">
             Download Resume
-          </a>
-          <a href="../" className="outline-btn">
+    </a>
+          <a href="contact" className="outline-btn">
             Contact
           </a>
         </div>

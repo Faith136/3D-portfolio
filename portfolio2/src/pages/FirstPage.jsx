@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 //import React from 'react'
-import myimg from "../assets/myimg.jpg"
+import myimg from "../assets/myimg.webp"
 
 const FirstPage = () => {
   return (
@@ -11,12 +11,11 @@ const FirstPage = () => {
         <img src={myimg}  alt="" className="w-[300px] mx-auto "/>
     </div>
     <div>
-      <div className="space-y-3">
+      <div className="space-y-2">
         <p className="uppercase">Hello,</p>
-        <p className="text-4xl md:text-6xl font-bold text-black/80">I'm Faith</p>
+        <p className="text-2xl md:text-4xl font-bold text-black/80">I'm Faith</p>
         <p className="text-black/75 text-left">A Frontend Developer</p>
-        <p className="text-black/75"> I am dedicated to crafting solutions that blend creativity with functionality.  I bring user-focused designs to life through clean, 
-        responsive code ensuring a seamless experience for users across all devices. Let’s build something amazing together!.</p>
+        <p className="text-black/75"> I am dedicated to crafting high-performance, scalable frontend solutions that blend creativity with functionality. I build user-focused interfaces using clean, responsive, and optimized code, ensuring fast load times and seamless experiences across all devices. I also implement performance optimization techniques and testing to deliver reliable, production-ready applications. Let’s build something amazing together.</p>
       
       <a className="inline-block primary-btn" href="mailto:faithodongo9@gmail.com">Hire Me</a>
       </div>
