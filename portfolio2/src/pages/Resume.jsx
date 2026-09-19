@@ -14,7 +14,7 @@ const Resume = () => {
         <h3 className="text-xl font-bold text-gray-700">Technical University of Kenya</h3>
         <p className="text-sm text-gray-500">Higher Diploma in Information Technology (2019 - 2023)</p>
         <p className="text-gray-600 mt-2">
-          Focused on network support and frontend development, with a strong foundation in web technologies, software engineering, and system management.
+          Focused on network support and frontend development, with a strong foundation in web technologies, relational databases, and system management.
         </p>
       </div>
       
@@ -38,7 +38,7 @@ const Resume = () => {
         <h3 className="text-xl font-bold text-gray-700">Intern - KenyaWeb.Com Limited</h3>
         <p className="text-sm text-gray-500">November 2022 - February 2023</p>
         <p className="text-gray-600 mt-2">
-          Developed responsive web interfaces using React.js and Tailwind CSS. Collaborated with backend teams to integrate APIs and optimize user experience.
+         Handled front office duties and fixed network issues. Developed responsive web interfaces using React.js and Tailwind CSS. Collaborated with backend teams to integrate APIs and optimize user experience.
         </p>
       </div>
 

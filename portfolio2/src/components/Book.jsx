@@ -24,20 +24,20 @@ import promp from "../assets/promp.webp";
 const Book = React.memo(function Book() {
     const ProjectData = [
         {
-          name: "Freecodecamp Frontend Certificate",
-          description: "This is a small portfolio that contains demos for various practice projects done while learning.Learnt about state management, memoization, responsive design, optimization, hooks and testing.",
+          name: "DopBrain",
+          description: "A website that suggests activities to boost dopamine levels naturally, helping to enhance motivation, focus, and overall brain functions.Learnt about state management, memoization, responsive design, optimization, hooks and testing.",
           image: hos,
-          previewLink: "https://hospital-coral-nine.vercel.app/",
-          tools: 'React, Tailwind',
-          githubLink: 'https://github.com/Faith136/hospital',
+          previewLink: "dop-brain-75ao.vercel.app/",
+          tools: 'Next.js, CSS modules, crud operations',
+          githubLink: 'https://github.com/Faith136/DopBrain',
         },
         {
-          name: "Mpesa Intergration sample",
-          description: "Used safaricom sdk to implement this payment gateway.If you want to see it click the link below to see the code and the live demonstrations",
+          name: "Blog App",
+          description: "A full-stack style blog application built with Next.js that allows users to browse posts, view comments, authenticate, and manage cached data. It also includes offline handling and API integration. If you want to see it, click the link below to view the code and live demonstration.",
           image: mpesa,
           previewLink: "",
-          tools: 'Node js,Express,Tailwindcss',
-          githubLink: 'https://github.com/Faith136/nodeprac',
+           tools: "Next.js, React, Redux Toolkit, Redux Saga, Tailwind CSS, DummyJSON",
+          githubLink: 'https://github.com/Faith136/Blog-App',
         },
       ];
       const ProjectData2 = [
@@ -77,9 +77,22 @@ const Book = React.memo(function Book() {
         },
       ];
     return (
-        <HTMLFlipBook width={600} height={700} showCover="true">
+        <HTMLFlipBook
+  size="stretch"
+  minWidth={280}
+  maxWidth={1000}
+  minHeight={400}
+  maxHeight={1533}
+  width={550}       // still required as a base/aspect reference
+  height={733}
+  showCover={true}
+  mobileScrollSupport={true}   // important — see below
+  usePortrait={true}           // shows single page instead of spread on narrow screens
+  className="flipbook"
+   //disableFlipByClick={true}
+>
             <Page number={0}>
-        <Cover coverImg={coverImgs} title="My Portfolio" subtitle="{Click here to open}" />
+        <Cover coverImg={coverImgs} title="FAITH MECHA's" title2="Portfolio" subtitle="{Click to open/close pages}" />
             </Page>
 
             <Page number={1}>
@@ -114,7 +127,7 @@ const Book = React.memo(function Book() {
              <AoB />
             </Page>
             <Page number={11}>
-             <Cover coverImg={EndImg} title="React&Tailwind" subtitle="@2024" />
+             <Cover coverImg={EndImg} title="My Portfolio" subtitle={`@${new Date().getFullYear()}`} />
             </Page>
 
 

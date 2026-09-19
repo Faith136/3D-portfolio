@@ -2,7 +2,7 @@
 import React from "react";
 
 
-const Cover = React.memo(function Cover({ coverImg, title, subtitle }){
+const Cover = React.memo(function Cover({ coverImg, title, title2, subtitle }){
   const coverImgStyle = {
     backgroundImage: `url(${coverImg})`,
     backgroundRepeat: "no-repeat",
@@ -16,10 +16,13 @@ const Cover = React.memo(function Cover({ coverImg, title, subtitle }){
   return (
     <div className="h-full" style={coverImgStyle}>
       <div className="h-full flex flex-col justify-center items-center page-shadow">
-        <h1 className="text-primary text-6xl font-extrabold font-outline-4">
+        <h1 className="text-primary text-5xl font-extrabold font-outline-2 px-2">
           {title}
         </h1>
-        <p className="text-3xl text-fuchsia-600 font-bold font-outline-2">
+        <h1 className="text-primary text-6xl font-extrabold font-outline-2">
+          {title2}
+        </h1>
+        <p className="text-3xl text-fuchsia-600 font-bold font-outline-2 mb-10">
         {subtitle}
         </p>
       </div>

@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 
 const Contac = ({ setFlipEnabled }) => {
   const form = useRef();
-  const [message, setMessage] = useState(''); // To handle success or error messages
+  const [message, setMessage] = useState('');
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,29 +17,46 @@ const Contac = ({ setFlipEnabled }) => {
       .then(
         () => {
           setMessage('Your message has been sent successfully!');
-          e.target.reset(); // Reset form fields after submission
-          setFlipEnabled(true); // Re-enable flipping after form submission
+          e.target.reset();
+          setFlipEnabled(true);
         },
         (error) => {
           setMessage('Failed to send message. Please try again.');
+          setFlipEnabled(true);
         }
       );
   };
 
   const handleFocus = () => {
-    setFlipEnabled(false); // Disable flipping when form is in focus
+    setFlipEnabled(false);
+  };
+
+  const handleBlur = (e) => {
+    if (!e.currentTarget.contains(e.relatedTarget)) {
+      setFlipEnabled(true);
+    }
+  };
+
+  // This is the actual fix: stop the flip library's own
+  // mousedown/touchstart listeners (attached on an ancestor
+  // element) from ever seeing the interaction.
+  const stopFlipGesture = (e) => {
+    e.stopPropagation();
   };
 
   return (
-    <div className="h-full page-shadow flex items-center justify-center mb-2">
+    <div
+      className="email-page h-full page-shadow flex items-center justify-center mb-2"
+      onMouseDown={stopFlipGesture}
+      onTouchStart={stopFlipGesture}
+    >
       <div className="w-full max-w-md p-2">
         <div className="text-center pb-6">
           <h1 className="text-3xl">Contact Me!</h1>
           <p className="text-gray-300">Fill up the form below to send us a message.</p>
         </div>
 
-        {/* Form to handle input, onFocus disables flipping */}
-        <form ref={form} onSubmit={sendEmail} onFocus={handleFocus}>
+        <form ref={form} onSubmit={sendEmail} onFocus={handleFocus} onBlur={handleBlur}>
           <input
             className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
@@ -47,7 +64,6 @@ const Contac = ({ setFlipEnabled }) => {
             name="user_name"
             required
           />
-
           <input
             className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="email"
@@ -55,7 +71,6 @@ const Contac = ({ setFlipEnabled }) => {
             name="user_email"
             required
           />
-
           <input
             className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
@@ -63,7 +78,6 @@ const Contac = ({ setFlipEnabled }) => {
             name="_subject"
             required
           />
-
           <textarea
             className="shadow mb-4 appearance-none border w-full py-2 px-3 text-gray-700 rounded leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Enter message"
@@ -71,7 +85,6 @@ const Contac = ({ setFlipEnabled }) => {
             name="message"
             required
           ></textarea>
-
           <div className="text-center">
             <input
               className="shadow bg-primary hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -81,7 +94,6 @@ const Contac = ({ setFlipEnabled }) => {
           </div>
         </form>
 
-        {/* Display success or error message */}
         {message && <p className="text-green-500 mt-4">{message}</p>}
       </div>
     </div>
@@ -89,10 +101,3 @@ const Contac = ({ setFlipEnabled }) => {
 };
 
 export default Contac;
-
-
-  /**
-   * YOUR_SERVICE_ID="service_9o5enx9"
-YOUR_TEMPLATE_ID="template_02eliv5"
-YOUR_PUBLIC_KEY="cEPOgoMYK1_DF9skS"
-   */

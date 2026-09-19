@@ -32,7 +32,7 @@ const About = () => {
         </div>
         {/* Button Links */}
         <div className="flex space-x-4 mt-4">
-            <a href="/cv.pdf" className="primary-btn" download target="_blank" rel="noopener noreferrer">
+            <a href="/Faith-Mecha-O-CV.pdf" className="primary-btn" download target="_blank" rel="noopener noreferrer">
             Download Resume
     </a>
           <a href="contact" className="outline-btn">
